@@ -9,7 +9,7 @@ const Columns = () => {
       <div></div>
       {homePageColumns.map((column) => (
         <div className="col-4 mt-2">
-          <Card column={column} key={column.id} />{' '}
+          <Card column={column} key={column.id} />
         </div>
       ))}
     </div>

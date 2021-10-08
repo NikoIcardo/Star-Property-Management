@@ -12,6 +12,9 @@ const Card = ({ column }) => {
         <h5 className="card-title">{column.title}</h5>
         <hr />
         <p className="card-text">{column.content}</p>
+        <a href={column.link.page} class="btn btn-dark">
+          {column.link.text}
+        </a>
       </div>
     </div>
   );
