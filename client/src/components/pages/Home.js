@@ -3,7 +3,7 @@ import Carousel from '../layout/Carousel';
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="container-fluid mx-0 p-0">
       <Carousel />
     </div>
   );
