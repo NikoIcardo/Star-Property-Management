@@ -14,7 +14,7 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
       </div>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
       <ul className="navbar-nav d-none d-lg-inline navbar-text-center">
         <li className="nav-item">
-          <Link className="nav-link" href="/">
+          <Link className="nav-link" to="/">
             Star Property Managment
           </Link>
         </li>
