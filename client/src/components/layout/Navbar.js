@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
       <ul className="navbar-nav d-none d-lg-inline navbar-text-center">
         <li className="nav-item">
-          <Link className="nav-link" to="/">
+          <Link className="title-link" to="/">
             Star Property Managment
           </Link>
         </li>
