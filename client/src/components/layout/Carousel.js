@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { homePageData } from '../../homePageData';
+import { homePageImages } from '../data/homePageData';
 import CarouselItem from './CarouselItem';
 
 const Carousel = () => {
@@ -22,7 +22,7 @@ const Carousel = () => {
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           </ol>
           <div className="carousel-inner">
-            {homePageData.map((home) => (
+            {homePageImages.map((home) => (
               <CarouselItem home={home} key={home.id} />
             ))}
           </div>
