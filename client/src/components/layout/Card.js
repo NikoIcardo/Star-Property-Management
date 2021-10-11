@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({ column }) => {
   return (
-    <div className="card text-center">
+    <div className="card text-center ">
       <img
         className="card-img-top img"
         src={'./img/' + column.image}

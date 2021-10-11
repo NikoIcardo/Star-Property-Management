@@ -8,7 +8,7 @@ const Columns = () => {
     <div className="row">
       <div></div>
       {homePageColumns.map((column) => (
-        <div className="col-4 mt-2">
+        <div className="col-4 my-5 mx-0 d-flex align-items-stretch">
           <Card column={column} key={column.id} />
         </div>
       ))}
