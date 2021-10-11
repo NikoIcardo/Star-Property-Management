@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { filterProperties } from '../../actions/propertyActions';
 
-const SearchProperties = () => {
+const SearchProperties = ({ filterProperties }) => {
   const [search, setSearch] = useState('');
 
   const onChange = (e) => {
     setSearch(e.target.value);
+    filterProperties(search);
   };
   return (
     <form>
@@ -24,4 +27,4 @@ const SearchProperties = () => {
   );
 };
 
-export default SearchProperties;
+export default connect(null, { filterProperties })(SearchProperties);

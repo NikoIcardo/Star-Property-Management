@@ -103,10 +103,10 @@ export const getProperties = () => (dispatch) => {
 };
 
 // Filter Properties
-export const filterProperties = () => (dispatch) => {
+export const filterProperties = (text) => (dispatch) => {
   dispatch({
     type: FILTER_PROPERTIES,
-    payload: properties,
+    payload: text,
   });
 };
 
