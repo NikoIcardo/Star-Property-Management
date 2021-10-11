@@ -68,7 +68,8 @@ const ContactUs = () => {
             </li>
             <li>
               Address: <br />
-              111 Star Property Mgmt. Lane <br />
+              Star Property Management
+              <br /> 111 Star Property Mgmt. Lane <br />
               San Francisco CA, 94016
             </li>
           </ul>
