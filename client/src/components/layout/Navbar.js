@@ -5,7 +5,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light border-bottom border-dark">
+    <nav className="navbar navbar-expand-md navbar-light bg-olive border-bottom border-dark">
       <div>
         <button
           className="navbar-toggler"
@@ -47,7 +47,7 @@ const Navbar = () => {
       <ul className="navbar-nav d-none d-lg-inline navbar-text-center">
         <li className="nav-item">
           <Link className="title-link" to="/">
-            Star Property Managment
+            <h4>Star Property Managment</h4>
           </Link>
         </li>
       </ul>

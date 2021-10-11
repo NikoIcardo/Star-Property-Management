@@ -9,7 +9,7 @@ const Card = ({ column }) => {
         alt="Home Page Column"
       />
       <div class="card-body">
-        <h5 className="card-title">{column.title}</h5>
+        <h4 className="card-title">{column.title}</h4>
         <hr />
         <p className="card-text">{column.content}</p>
         <a href={column.link.page} class="btn btn-dark">
