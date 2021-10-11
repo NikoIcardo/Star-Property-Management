@@ -27,7 +27,7 @@ export const homePageColumns = [
     image: 'tenant.jpg',
     link: {
       text: 'Find A Rental',
-      page: '',
+      page: '/AvailableProperties',
     },
   },
   {
@@ -38,7 +38,7 @@ export const homePageColumns = [
     image: 'owner.jpg',
     link: {
       text: 'Our Services',
-      page: '',
+      page: '/OurServices',
     },
   },
   {
@@ -49,7 +49,7 @@ export const homePageColumns = [
     image: 'agent.jpg',
     link: {
       text: 'Contact Us Today',
-      page: '',
+      page: '/ContactUs',
     },
   },
 ];

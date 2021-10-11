@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import SearchProperties from '../layout/SearchProperties';
 import { getProperties } from '../../actions/propertyActions';
+import SearchProperties from '../layout/SearchProperties';
+import PropertyCard from '../layout/PropertyCard';
 
-const AvailableProperties = ({ properties, getProperties }) => {
+const AvailableProperties = ({ properties, loading, getProperties }) => {
   useEffect(() => {
     getProperties();
   }, [getProperties]);
@@ -15,7 +16,7 @@ const AvailableProperties = ({ properties, getProperties }) => {
         </div>
       </div>
       <hr />
-      <div>
+      <div className="row">
         <div className="col-6 m-4">
           <p className="text-left">
             Browse our available properties below or use the search bar to find
@@ -25,12 +26,25 @@ const AvailableProperties = ({ properties, getProperties }) => {
       </div>
       <SearchProperties />
       <hr />
+      <div className="row m-5">
+        {!loading && properties !== null ? (
+          properties.map((property) => (
+            <PropertyCard
+              property={property}
+              key={properties.indexOf(property)}
+            />
+          ))
+        ) : (
+          <h3>There Are Currently No Properties Available</h3>
+        )}
+      </div>
     </div>
   );
 };
 
 const mapStatetoProps = (state) => ({
-  properties: state.properties,
+  properties: state.properties.properties,
+  loading: state.properties.loading,
 });
 
 export default connect(mapStatetoProps, { getProperties })(AvailableProperties);
