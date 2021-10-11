@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import SearchProperties from '../layout/SearchProperties';
+import { getProperties } from '../../actions/propertyActions';
 
-const AvailableProperties = () => {
+const AvailableProperties = ({ properties, getProperties }) => {
+  useEffect(() => {
+    getProperties();
+  }, [getProperties]);
   return (
     <div className="container-fluid mx-0 p-0">
       <div className="row">
@@ -24,4 +29,8 @@ const AvailableProperties = () => {
   );
 };
 
-export default AvailableProperties;
+const mapStatetoProps = (state) => ({
+  properties: state.properties,
+});
+
+export default connect(mapStatetoProps, { getProperties })(AvailableProperties);
