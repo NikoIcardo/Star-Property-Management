@@ -2,18 +2,4 @@ body {
   font-family: Roboto;
 }
 
-.navbar-text-center {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%);
-}
 
-.title-link {
-  color: black;
-  text-decoration: none;
-}
-
-.title-link:hover {
-  color: black;
-  text-decoration: none;
-}

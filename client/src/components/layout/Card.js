@@ -4,7 +4,7 @@ const Card = ({ column }) => {
   return (
     <div class="card text-center">
       <img
-        class="card-img-top"
+        class="card-img-top img"
         src={'./img/' + column.image}
         alt="Home Page Column"
       />
