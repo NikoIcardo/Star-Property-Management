@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState } from "react";
 
 const ContactUs = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
   const [formError, setFormError] = useState(false);
 
@@ -14,7 +14,7 @@ const ContactUs = () => {
       setSent(true);
     } else {
       setFormError(true);
-      console.log('Form-Error');
+      console.log("Form-Error");
     }
   };
 
@@ -61,7 +61,7 @@ const ContactUs = () => {
           <ul>
             <li>Phone: 111-111-1111</li>
             <li>
-              Email:{' '}
+              Email:{" "}
               <a href="mailto:test@test.com" target="_blank" rel="noreferrer">
                 test@test.com
               </a>

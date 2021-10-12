@@ -31,7 +31,7 @@ const TenantLogin = ({ tenant, tenantLogin }) => {
         >
           <form onSubmit={onSubmit}>
             <div className="form-group">
-              <label htmlfor="email" className="form-label">
+              <label htmlFor="email" className="form-label">
                 Email
               </label>
               <input
@@ -44,7 +44,7 @@ const TenantLogin = ({ tenant, tenantLogin }) => {
               ></input>
             </div>
             <div className="form-group">
-              <label htmlfor="password" className="form-label">
+              <label htmlFor="password" className="form-label">
                 Password
               </label>
               <input

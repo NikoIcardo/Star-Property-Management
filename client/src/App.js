@@ -1,20 +1,22 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
-import Home from './components/pages/Home';
-import OurServices from './components/pages/OurServices';
-import ContactUs from './components/pages/ContactUs';
-import AvailableProperties from './components/pages/AvailableProperties';
-import Property from './components/pages/Property';
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/layout/Navbar";
+import Home from "./components/pages/Home";
+import OurServices from "./components/pages/OurServices";
+import ContactUs from "./components/pages/ContactUs";
+import AvailableProperties from "./components/pages/AvailableProperties";
+import Property from "./components/pages/Property";
 
-import AgentLogin from './components/pages/AgentLogin';
-import OwnerLogin from './components/pages/OwnerLogin';
-import TenantLogin from './components/pages/TenantLogin';
+import AgentLogin from "./components/pages/AgentLogin";
+import OwnerLogin from "./components/pages/OwnerLogin";
+import TenantLogin from "./components/pages/TenantLogin";
 
-import { Provider } from 'react-redux';
-import store from './store';
+import Tenant from "./components/pages/Tenant";
 
-import './index.css';
+import { Provider } from "react-redux";
+import store from "./store";
+
+import "./index.css";
 
 const App = () => {
   return (
@@ -35,6 +37,7 @@ const App = () => {
             <Route exact path="/AgentLogin" component={AgentLogin} />
             <Route exact path="/OwnerLogin" component={OwnerLogin} />
             <Route exact path="/TenantLogin" component={TenantLogin} />
+            <Route exact path="/Tenant" component={Tenant} />
           </Switch>
         </Fragment>
       </Router>

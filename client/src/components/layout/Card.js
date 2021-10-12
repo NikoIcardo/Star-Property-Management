@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Card = ({ column }) => {
   return (
     <div className="card text-center ">
       <img
         className="card-img-top img"
-        src={'./img/' + column.image}
+        src={"./img/" + column.image}
         alt="Home Page Column"
       />
       <div className="card-body">
