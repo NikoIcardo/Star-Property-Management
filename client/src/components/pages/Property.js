@@ -17,12 +17,11 @@ const Property = ({ current }) => {
           </div>
           <div className="row">
             {current.img.map((photo) => (
-              <div className="col-4 mt-5">
+              <div className="col-4 mt-5 mx-0">
                 <img
-                  className="img-fluid m-2"
+                  className="img-fluid mx-0"
                   src={photo.path}
                   alt={photo.alt}
-                  height="400px"
                 />
               </div>
             ))}
