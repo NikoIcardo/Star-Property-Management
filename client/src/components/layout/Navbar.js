@@ -23,9 +23,9 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="/">
+            <Link className="nav-link" to="/">
               Home <span className="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/AvailableProperties">
@@ -33,14 +33,14 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/OurServices">
+            <Link className="nav-link" to="/OurServices">
               Our Services
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/ContactUs">
+            <Link className="nav-link" to="/ContactUs">
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -53,19 +53,19 @@ const Navbar = () => {
       </ul>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link" href="/">
+          <Link className="nav-link" to="/">
             Agent Login
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/">
+          <Link className="nav-link" to="/">
             Owner Login
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/">
+          <Link className="nav-link" to="/">
             Tenant Login
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

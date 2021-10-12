@@ -5,6 +5,7 @@ import Home from './components/pages/Home';
 import OurServices from './components/pages/OurServices';
 import ContactUs from './components/pages/ContactUs';
 import AvailableProperties from './components/pages/AvailableProperties';
+import Property from './components/pages/Property';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -26,6 +27,7 @@ const App = () => {
               path="/AvailableProperties"
               component={AvailableProperties}
             />
+            <Route exact path="/Property" component={Property} />
           </Switch>
         </Fragment>
       </Router>

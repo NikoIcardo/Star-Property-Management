@@ -1,8 +1,14 @@
-import { GET_PROPERTIES, FILTER_PROPERTIES, LOADING } from './types';
+import {
+  GET_PROPERTIES,
+  FILTER_PROPERTIES,
+  LOADING,
+  SET_CURRENT,
+} from './types';
 
 // temp properties
 const properties = [
   {
+    id: '1',
     title: 'Suburb Home 1',
     description:
       'A nice house for rent in the suburbs. It features a nearby school, a public pool in the neighborhood, 3 bedrooms, 2 bath, upstairs and downstairs, spacious kitchen.',
@@ -18,6 +24,7 @@ const properties = [
     price: 2500,
   },
   {
+    id: '2',
     title: 'Suburb Home 2',
     description:
       'A nice house for rent in the suburbs. It features a nearby school, a public tennis court in the neighborhood, 2 bedrooms, 3 bath, upstairs and downstairs, spacious living room.',
@@ -33,6 +40,7 @@ const properties = [
     price: 1800,
   },
   {
+    id: '3',
     title: 'Apartment 1',
     description:
       'A great space for a college student looking for something with convenient campus access!',
@@ -48,6 +56,7 @@ const properties = [
     price: 1300,
   },
   {
+    id: '4',
     title: 'Suburb Home 1',
     description:
       'A nice house for rent in the suburbs. It features a nearby school, a public pool in the neighborhood, 3 bedrooms, 2 bath, upstairs and downstairs, spacious kitchen.',
@@ -63,6 +72,7 @@ const properties = [
     price: 2500,
   },
   {
+    id: '5',
     title: 'Suburb Home 2',
     description:
       'A nice house for rent in the suburbs. It features a nearby school, a public tennis court in the neighborhood, 2 bedrooms, 3 bath, upstairs and downstairs, spacious living room.',
@@ -78,6 +88,7 @@ const properties = [
     price: 1800,
   },
   {
+    id: '6',
     title: 'Apartment 1',
     description:
       'A great space for a college student looking for something with convenient campus access!',
@@ -96,6 +107,7 @@ const properties = [
 
 // Get Properties
 export const getProperties = () => (dispatch) => {
+  loading();
   dispatch({
     type: GET_PROPERTIES,
     payload: properties,
@@ -113,9 +125,18 @@ export const filterProperties = (text) => (dispatch) => {
   });
 };
 
+// Set Current Property
+
+export const setCurrent = (id) => (dispatch) => {
+  dispatch({
+    type: SET_CURRENT,
+    payload: id,
+  });
+};
+
 // Loading
 
-export const Loading = () => (dispatch) => {
+export const loading = () => (dispatch) => {
   dispatch({
     type: LOADING,
   });

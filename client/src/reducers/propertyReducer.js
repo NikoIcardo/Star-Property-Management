@@ -1,9 +1,15 @@
-import { GET_PROPERTIES, FILTER_PROPERTIES, LOADING } from '../actions/types';
+import {
+  GET_PROPERTIES,
+  FILTER_PROPERTIES,
+  LOADING,
+  SET_CURRENT,
+} from '../actions/types';
 
 const initialState = {
   properties: null,
   loading: false,
   filtered: null,
+  currentProperty: null,
 };
 
 //eslint-disable-next-line
@@ -30,6 +36,11 @@ export default (state = initialState, action) => {
                 );
               })
             : null,
+      };
+    case SET_CURRENT:
+      return {
+        ...state,
+        currentProperty: state.properties[action.payload],
       };
     case LOADING:
       return {

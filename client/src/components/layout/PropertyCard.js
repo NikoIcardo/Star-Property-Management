@@ -1,8 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setCurrent } from '../../actions/propertyActions';
 
 import './PropertyCard.css';
 
-const PropertyCard = ({ property }) => {
+const PropertyCard = ({ property, setCurrent }) => {
+  const history = useHistory();
+  const onClick = () => {
+    setCurrent(property.id);
+    history.push('/Property');
+  };
+
   return (
     <div className="col-12 col-md-6 col-lg-4 mb-4 d-flex align-items-stretch propertyCard overlay">
       <div className="card text-center">
@@ -18,7 +27,7 @@ const PropertyCard = ({ property }) => {
           <p className="card-text">{property.description}</p>
         </div>
 
-        <div className="hidden">
+        <div className="hidden" onClick={onClick}>
           <h2 className="align-middle mt-5">
             Interested in this Property? Click for More Info!
           </h2>
@@ -28,4 +37,4 @@ const PropertyCard = ({ property }) => {
   );
 };
 
-export default PropertyCard;
+export default connect(null, { setCurrent })(PropertyCard);
