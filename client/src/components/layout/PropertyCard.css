@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1500px) {
+  .propertyPhoto {
+    --prop-image-height: 320px;
+    height: var(--prop-image-height);
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .propertyPhoto {
+    --prop-image-height: 500px;
+    height: var(--prop-image-height);
+  }
+  .propertyCard {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

@@ -29,18 +29,22 @@ h5 {
   background-color: rgb(152, 184, 128);
 }
 
-@media only screen and (max-width: 1500px) {
-  .propertyPhoto {
-    height: 320px;
-  }
+.overlay {
 }
 
-@media only screen and (min-width: 1500px) {
-  .propertyPhoto {
-    height: 500px;
-  }
-  .propertyCard {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
+.hidden {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgb(152, 184, 128);
+}
+
+.overlay:hover .hidden {
+  opacity: 1;
 }
