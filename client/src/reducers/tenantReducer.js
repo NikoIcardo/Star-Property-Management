@@ -1,9 +1,9 @@
-import { TENANT_LOGIN, ADD_TENANT } from "../actions/types";
+import { TENANT_LOGIN, ADD_TENANT } from '../actions/types';
 
-import { tenants } from "../components/data/tenants";
+import { tenants } from '../components/data/tenants';
 
 const initialState = {
-  tenant: null,
+  tenant: tenants[0],
 };
 
 //eslint-disable-next-line

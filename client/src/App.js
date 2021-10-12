@@ -1,22 +1,22 @@
-import React, { Fragment } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import Home from "./components/pages/Home";
-import OurServices from "./components/pages/OurServices";
-import ContactUs from "./components/pages/ContactUs";
-import AvailableProperties from "./components/pages/AvailableProperties";
-import Property from "./components/pages/Property";
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Home from './components/pages/public/Home';
+import OurServices from './components/pages/public/OurServices';
+import ContactUs from './components/pages/public/ContactUs';
+import AvailableProperties from './components/pages/public/AvailableProperties';
+import Property from './components/pages/public/Property';
 
-import AgentLogin from "./components/pages/AgentLogin";
-import OwnerLogin from "./components/pages/OwnerLogin";
-import TenantLogin from "./components/pages/TenantLogin";
+import AgentLogin from './components/pages/public/AgentLogin';
+import OwnerLogin from './components/pages/public/OwnerLogin';
+import TenantLogin from './components/pages/public/TenantLogin';
 
-import Tenant from "./components/pages/Tenant";
+import Tenant from './components/pages/private/Tenant';
 
-import { Provider } from "react-redux";
-import store from "./store";
+import { Provider } from 'react-redux';
+import store from './store';
 
-import "./index.css";
+import './index.css';
 
 const App = () => {
   return (

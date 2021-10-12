@@ -92,7 +92,7 @@ const properties = [
     title: 'Apartment',
     description:
       'A great space for a college student looking for something with convenient campus access!',
-    address: '111 Apartment Road, Apt. 111,  Sanfrancisco, CA 11111',
+    address: '111 Apartment Road, Apt. 111, Sanfrancisco, CA 11111',
     img: [
       {
         path: './img/properties/apartment1/apartment1.jpg',

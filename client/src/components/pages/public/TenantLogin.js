@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { connect } from "react-redux";
-import { tenantLogin } from "../../actions/tenantActions";
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { tenantLogin } from '../../../actions/tenantActions';
 
 const TenantLogin = ({ tenant, tenantLogin }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const history = useHistory();
 
@@ -13,7 +13,7 @@ const TenantLogin = ({ tenant, tenantLogin }) => {
     e.preventDefault();
     tenantLogin(email, password);
     if (tenant) {
-      history.push("/Tenant");
+      history.push('/Tenant');
     }
   };
 
@@ -27,7 +27,7 @@ const TenantLogin = ({ tenant, tenantLogin }) => {
       <div className="row mt-5">
         <div
           className="col-6 offset-3 bg-olive p-4"
-          style={{ borderRadius: "4px" }}
+          style={{ borderRadius: '4px' }}
         >
           <form onSubmit={onSubmit}>
             <div className="form-group">

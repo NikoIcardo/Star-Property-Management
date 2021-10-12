@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { pageHeader, rows } from '../data/ourServicesData';
-import OurServiceRow from '../layout/OurServiceRow';
+import { pageHeader, rows } from '../../data/ourServicesData';
+import OurServiceRow from '../../layout/OurServiceRow';
 
 const OurServices = () => {
   return (

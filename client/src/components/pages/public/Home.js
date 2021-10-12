@@ -1,6 +1,6 @@
 import React from 'react';
-import Carousel from '../layout/Carousel';
-import Columns from '../layout/Columns';
+import Carousel from '../../layout/Carousel';
+import Columns from '../../layout/Columns';
 
 const Home = () => {
   return (

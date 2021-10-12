@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getProperties } from '../../actions/propertyActions';
-import SearchProperties from '../layout/SearchProperties';
-import PropertyCard from '../layout/PropertyCard';
+import { getProperties } from '../../../actions/propertyActions';
+import SearchProperties from '../../layout/SearchProperties';
+import PropertyCard from '../../layout/PropertyCard';
 
 const AvailableProperties = ({
   properties,
