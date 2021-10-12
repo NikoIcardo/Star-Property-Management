@@ -9,7 +9,7 @@ import {
 const properties = [
   {
     id: '1',
-    title: 'Suburb Home 1',
+    title: 'Suburb Home',
     description:
       'A nice house for rent in the suburbs. It features a nearby school, a public pool in the neighborhood, 3 bedrooms, 2 bath, upstairs and downstairs, spacious kitchen.',
     address: '111 House Lane, Sanfrancisco, CA 11111',
@@ -25,7 +25,7 @@ const properties = [
   },
   {
     id: '2',
-    title: 'Suburb Home 2',
+    title: 'Suburb Home',
     description:
       'A nice house for rent in the suburbs. It features a nearby school, a public tennis court in the neighborhood, 2 bedrooms, 3 bath, upstairs and downstairs, spacious living room.',
     address: '112 House Lane, Sanfrancisco, CA 11111',
@@ -41,7 +41,7 @@ const properties = [
   },
   {
     id: '3',
-    title: 'Apartment 1',
+    title: 'Apartment',
     description:
       'A great space for a college student looking for something with convenient campus access!',
     address: '111 Apartment Road, Apt. 111,  Sanfrancisco, CA 11111',
@@ -57,7 +57,7 @@ const properties = [
   },
   {
     id: '4',
-    title: 'Suburb Home 1',
+    title: 'Suburb Home',
     description:
       'A nice house for rent in the suburbs. It features a nearby school, a public pool in the neighborhood, 3 bedrooms, 2 bath, upstairs and downstairs, spacious kitchen.',
     address: '111 House Lane, Sanfrancisco, CA 11111',
@@ -73,7 +73,7 @@ const properties = [
   },
   {
     id: '5',
-    title: 'Suburb Home 2',
+    title: 'Suburb Home',
     description:
       'A nice house for rent in the suburbs. It features a nearby school, a public tennis court in the neighborhood, 2 bedrooms, 3 bath, upstairs and downstairs, spacious living room.',
     address: '112 House Lane, Sanfrancisco, CA 11111',
@@ -89,7 +89,7 @@ const properties = [
   },
   {
     id: '6',
-    title: 'Apartment 1',
+    title: 'Apartment',
     description:
       'A great space for a college student looking for something with convenient campus access!',
     address: '111 Apartment Road, Apt. 111,  Sanfrancisco, CA 11111',
@@ -98,9 +98,17 @@ const properties = [
         path: './img/properties/apartment1/apartment1.jpg',
         alt: 'Photo by George Becker from Pexels',
       },
+      {
+        path: './img/properties/apartment1/apartment12.jpg',
+        alt: 'Photo by Pixabay from Pexels',
+      },
+      {
+        path: './img/properties/apartment1/apartment13.jpg',
+        alt: 'Photo by Polina Kovaleva from Pexels',
+      },
     ],
     renter: null,
-    owner: 'Don',
+    owner: 'Don Julio',
     price: 1300,
   },
 ];

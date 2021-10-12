@@ -40,7 +40,9 @@ export default (state = initialState, action) => {
     case SET_CURRENT:
       return {
         ...state,
-        currentProperty: state.properties[action.payload],
+        currentProperty: state.properties.find(
+          (property) => property.id === action.payload
+        ),
       };
     case LOADING:
       return {
