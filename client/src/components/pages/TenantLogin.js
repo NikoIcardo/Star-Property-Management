@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import { tenantLogin } from "../../actions/tenantActions";
 
-const TenantLogin = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const TenantLogin = ({ tenant, tenantLogin }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const history = useHistory();
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    tenantLogin(email, password);
+    if (tenant) {
+      history.push("/Tenant");
+    }
   };
 
   return (
@@ -19,7 +27,7 @@ const TenantLogin = () => {
       <div className="row mt-5">
         <div
           className="col-6 offset-3 bg-olive p-4"
-          style={{ borderRadius: '4px' }}
+          style={{ borderRadius: "4px" }}
         >
           <form onSubmit={onSubmit}>
             <div className="form-group">
@@ -56,4 +64,8 @@ const TenantLogin = () => {
   );
 };
 
-export default TenantLogin;
+const mapStatetoProps = (state) => ({
+  tenant: state.tenants.tenant,
+});
+
+export default connect(mapStatetoProps, { tenantLogin })(TenantLogin);
