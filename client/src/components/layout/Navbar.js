@@ -53,17 +53,17 @@ const Navbar = () => {
       </ul>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/AgentLogin">
             Agent Login
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/OwnerLogin">
             Owner Login
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/TenantLogin">
             Tenant Login
           </Link>
         </li>

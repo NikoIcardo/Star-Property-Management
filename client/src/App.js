@@ -7,6 +7,10 @@ import ContactUs from './components/pages/ContactUs';
 import AvailableProperties from './components/pages/AvailableProperties';
 import Property from './components/pages/Property';
 
+import AgentLogin from './components/pages/AgentLogin';
+import OwnerLogin from './components/pages/OwnerLogin';
+import TenantLogin from './components/pages/TenantLogin';
+
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -28,6 +32,9 @@ const App = () => {
               component={AvailableProperties}
             />
             <Route exact path="/Property" component={Property} />
+            <Route exact path="/AgentLogin" component={AgentLogin} />
+            <Route exact path="/OwnerLogin" component={OwnerLogin} />
+            <Route exact path="/TenantLogin" component={TenantLogin} />
           </Switch>
         </Fragment>
       </Router>

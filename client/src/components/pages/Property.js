@@ -45,8 +45,9 @@ const Property = ({ current }) => {
                 All properties are available in 6 and 12 month leases. If you
                 want to submit a rental application, please contact us in one of
                 the listed ways on our contact page and let us know your name,
-                your phone number, and the property address you are interested
-                in and we will send you a rental application.
+                your phone number, and the address of the property you are
+                interested in and we will send you a rental application. Thank
+                you!
               </p>
               <Link to="/ContactUs" className="btn btn-dark">
                 Contact Us
