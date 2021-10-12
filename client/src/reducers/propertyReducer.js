@@ -3,6 +3,7 @@ import { GET_PROPERTIES, FILTER_PROPERTIES, LOADING } from '../actions/types';
 const initialState = {
   properties: null,
   loading: false,
+  filtered: null,
 };
 
 //eslint-disable-next-line
@@ -18,17 +19,17 @@ export default (state = initialState, action) => {
     case FILTER_PROPERTIES:
       return {
         ...state,
-        properties:
-          action.payload !== ''
-            ? state.properties.filter((property) => {
-                const regex = new RegExp(`${action.payload}`, 'gi');
+        filtered:
+          action.payload.text !== ''
+            ? action.payload.properties.filter((property) => {
+                const regex = new RegExp(`${action.payload.text}`, 'gi');
                 return (
                   property.address.match(regex) ||
                   property.description.match(regex) ||
                   property.title.match(regex)
                 );
               })
-            : state.properties,
+            : null,
       };
     case LOADING:
       return {

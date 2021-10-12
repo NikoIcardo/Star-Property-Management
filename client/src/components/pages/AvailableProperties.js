@@ -4,7 +4,12 @@ import { getProperties } from '../../actions/propertyActions';
 import SearchProperties from '../layout/SearchProperties';
 import PropertyCard from '../layout/PropertyCard';
 
-const AvailableProperties = ({ properties, loading, getProperties }) => {
+const AvailableProperties = ({
+  properties,
+  filtered,
+  loading,
+  getProperties,
+}) => {
   useEffect(() => {
     getProperties();
   }, [getProperties]);
@@ -27,16 +32,23 @@ const AvailableProperties = ({ properties, loading, getProperties }) => {
       <SearchProperties />
       <hr />
       <div className="row m-5">
-        {!loading && properties !== null ? (
-          properties.map((property) => (
-            <PropertyCard
-              property={property}
-              key={properties.indexOf(property)}
-            />
-          ))
-        ) : (
-          <h3>There Are Currently No Properties Available</h3>
-        )}
+        {!loading &&
+          filtered !== null &&
+          filtered.map((prop) => (
+            <PropertyCard property={prop} key={properties.indexOf(prop)} />
+          ))}
+
+        {!loading && filtered === null && properties
+          ? properties.map((prop) => (
+              <PropertyCard property={prop} key={properties.indexOf(prop)} />
+            ))
+          : !filtered && (
+              <h2>
+                There are currently no available properties. Please contact our
+                office if interested on being put on a wait list!
+                <br /> Thank You!
+              </h2>
+            )}
       </div>
     </div>
   );
@@ -44,6 +56,7 @@ const AvailableProperties = ({ properties, loading, getProperties }) => {
 
 const mapStatetoProps = (state) => ({
   properties: state.properties.properties,
+  filtered: state.properties.filtered,
   loading: state.properties.loading,
 });
 

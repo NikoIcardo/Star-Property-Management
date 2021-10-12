@@ -106,7 +106,10 @@ export const getProperties = () => (dispatch) => {
 export const filterProperties = (text) => (dispatch) => {
   dispatch({
     type: FILTER_PROPERTIES,
-    payload: text,
+    payload: {
+      text,
+      properties,
+    },
   });
 };
 

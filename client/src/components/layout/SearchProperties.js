@@ -9,8 +9,11 @@ const SearchProperties = ({ filterProperties }) => {
     setSearch(e.target.value);
     filterProperties(search);
   };
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="form-group row mx-2">
         <div className="col-4">
           <input
