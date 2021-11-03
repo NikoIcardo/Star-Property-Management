@@ -10,14 +10,14 @@ import { Property } from '../actions/types';
 
 import { Reducer, Action } from 'redux'; 
 
-interface Properties {
+ export interface Properties {
   properties: Array<Property> | null, 
   loading: boolean,
   filtered: Array<Property> | null, 
   currentProperty: Property | undefined
 }
 
-const initialState = {
+const initialState: Properties = {
   properties: null,
   loading: false,
   filtered: null,

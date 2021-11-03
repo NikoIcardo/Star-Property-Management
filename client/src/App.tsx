@@ -14,7 +14,7 @@ import TenantLogin from './components/pages/public/TenantLogin';
 import Tenant from './components/pages/private/Tenant';
 
 import { Provider } from 'react-redux';
-import store from './store';
+import { store } from './store';
 
 import './index.css';
 

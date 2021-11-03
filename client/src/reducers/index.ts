@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import propertyReducer from './propertyReducer';
+import { propertyReducer }from './propertyReducer';
 import tenantReducer from './tenantReducer';
 
-export default combineReducers({
+export const rootReducer = combineReducers({
   properties: propertyReducer,
   tenants: tenantReducer,
 });
