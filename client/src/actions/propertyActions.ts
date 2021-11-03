@@ -5,6 +5,7 @@ import {
   SET_CURRENT,
 } from './types';
 
+
 // temp properties
 const properties = [
   {
@@ -114,38 +115,32 @@ const properties = [
 ];
 
 // Get Properties
-export const getProperties = () => (dispatch) => {
+export const getProperties = () => {
   loading();
-  dispatch({
+  return({
     type: GET_PROPERTIES,
     payload: properties,
   });
 };
 
 // Filter Properties
-export const filterProperties = (text) => (dispatch) => {
-  dispatch({
+export const filterProperties = (text: string) => ({
     type: FILTER_PROPERTIES,
     payload: {
       text,
       properties,
-    },
-  });
-};
+    }
+});
 
 // Set Current Property
 
-export const setCurrent = (id) => (dispatch) => {
-  dispatch({
-    type: SET_CURRENT,
-    payload: id,
-  });
-};
+export const setCurrent = (id: number) => ({
+  type: SET_CURRENT,
+  payload: id,
+});
 
 // Loading
 
-export const loading = () => (dispatch) => {
-  dispatch({
-    type: LOADING,
-  });
-};
+export const loading = () => ({
+  type: LOADING,
+});

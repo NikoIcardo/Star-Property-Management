@@ -8,7 +8,7 @@ const PaymentsColumn = ({ tenant }) => {
     if (tenant) {
       date.setDate(tenant.dueDate);
     }
-    setDueDate(String(`${date.getMonth() + 1}\\${date.getDate()}\\${2021}`));
+    setDueDate(String(`${date.getMonth() + 2}\\${date.getDate()}\\${2021}`));
   }, [setDueDate, tenant]);
 
   return (
