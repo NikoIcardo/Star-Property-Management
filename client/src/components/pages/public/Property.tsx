@@ -1,22 +1,32 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const Property = ({ current }) => {
-  console.log(current);
-  return (
+import { AppState } from '../../../store';
+import { Property as PropertyType} from '../../../actions/types'; 
+
+interface Props {
+  current: PropertyType | undefined
+}
+
+class Property extends Component<Props, AppState> {
+  
+  render = () => (
     <div className="container-fluid mx-0 p-0">
-      {current !== null && (
+      {this.props.current !== null && (
         <Fragment>
           <div className="row">
             <div className="col-12">
               <h1 className="mt-2 text-center bg-olive p-2">
-                {current.address}
+                {this.props.current?.address}
               </h1>
             </div>
           </div>
           <div className="row">
-            {current.img.map((photo) => (
+            {this.props.current?.img.map((photo: {
+              path: string, 
+              alt: string
+            }) => (
               <div className="col-4 mt-5 mx-0">
                 <img
                   className="img-fluid mx-0"
@@ -32,11 +42,11 @@ const Property = ({ current }) => {
               <h2>Description</h2>
               <hr />
               <ul>
-                <li>{current.title}</li>
-                <li>Owner: {current.owner}</li>
-                <li>Monthly Rent: {current.price}</li>
+                <li>{this.props.current?.title}</li>
+                <li>Owner: {this.props.current?.owner}</li>
+                <li>Monthly Rent: {this.props.current?.price}</li>
               </ul>
-              <p>{current.description}</p>
+              <p>{this.props.current?.description}</p>
             </div>
             <div className="col-6 m-2">
               <h2>Interested in Renting this Property?</h2>
@@ -60,7 +70,7 @@ const Property = ({ current }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppState) => ({
   current: state.properties.currentProperty,
 });
 

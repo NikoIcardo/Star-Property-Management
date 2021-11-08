@@ -9,10 +9,10 @@ export interface Property {
   title: string, 
   description: string, 
   address: string, 
-  img: {
+  img: Array<{
     path: string, 
     alt: string
-  },
+  }>,
   renter: string, 
   owner: string, 
   price: number
