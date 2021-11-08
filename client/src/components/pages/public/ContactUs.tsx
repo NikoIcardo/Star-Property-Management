@@ -1,24 +1,38 @@
-import React, { Fragment, useState } from "react";
+import React, { Component, Fragment, FormEvent } from 'react';
 
-const ContactUs = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [sent, setSent] = useState(false);
-  const [formError, setFormError] = useState(false);
 
-  const onSubmit = (e) => {
+interface State {
+  name: string, 
+  email: string, 
+  message: string, 
+  sent: boolean, 
+  formError: boolean
+}
+class ContactUs extends Component<any, State> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      sent: false,
+      formError: false,
+    };
+  }
+
+  onSubmit = (e: FormEvent<HTMLFormElement>):void => {
     e.preventDefault();
+    const { name, email, message } = this.state as State;
     if (name && email && message) {
       console.log(name, email, message);
-      setSent(true);
+      this.setState({ sent: true });
     } else {
-      setFormError(true);
-      console.log("Form-Error");
+      this.setState({ formError: true });
+      console.log('Form-Error');
     }
-  };
+  }
 
-  return (
+  render = () => (
     <div className="container-fluid mx-0 p-0">
       <div className="row">
         <div className="col-12 text-center">
@@ -61,7 +75,7 @@ const ContactUs = () => {
           <ul>
             <li>Phone: 111-111-1111</li>
             <li>
-              Email:{" "}
+              Email:{' '}
               <a href="mailto:test@test.com" target="_blank" rel="noreferrer">
                 test@test.com
               </a>
@@ -75,17 +89,17 @@ const ContactUs = () => {
           </ul>
         </div>
         <div className="col m-5 text-center">
-          {!sent ? (
-            <Fragment className="m-0 p-0">
+          {!this.state.sent ? (
+            <div className="m-0 p-0">
               <h3>Send us a Message</h3>
               <p>
                 We will get back to you within 24 hours and you will receive a
                 response via email.
               </p>
-              {formError && (
+              {this.state.formError && (
                 <p className="text-danger">Please Enter All Fields</p>
               )}
-              <form onSubmit={onSubmit}>
+              <form onSubmit={this.onSubmit}>
                 <div className="form-group text-left">
                   <label htmlFor="name" className="form-label text-left">
                     Name
@@ -93,10 +107,10 @@ const ContactUs = () => {
                   <input
                     type="text"
                     name="name"
-                    value={name}
+                    value={this.state.name}
                     className="form-control"
                     placeholder="First and Last Name"
-                    onInput={(e) => setName(e.target.value)}
+                    onInput={(e: FormEvent<HTMLInputElement>) => this.setState({ name: e.currentTarget.value })}
                   />
                 </div>
                 <div className="form-group text-left">
@@ -106,10 +120,10 @@ const ContactUs = () => {
                   <input
                     type="email"
                     name="email"
-                    value={email}
+                    value={this.state.email}
                     className="form-control"
                     placeholder="Your Email Address"
-                    onInput={(e) => setEmail(e.target.value)}
+                    onInput={(e: FormEvent<HTMLInputElement>) => this.setState({ email: e.currentTarget.value })}
                   />
                 </div>
                 <div className="form-group text-left">
@@ -118,11 +132,11 @@ const ContactUs = () => {
                   </label>
                   <textarea
                     name="message"
-                    value={message}
-                    rows="8"
+                    value={this.state.message}
+                    rows={8}
                     className="form-control"
                     placeholder="Enter A Message for Us!"
-                    onInput={(e) => setMessage(e.target.value)}
+                    onInput={(e: FormEvent<HTMLTextAreaElement>) => this.setState({ message: e.currentTarget.value })}
                   />
                 </div>
                 <div className="form-group text-left">
@@ -133,7 +147,7 @@ const ContactUs = () => {
                   />
                 </div>
               </form>
-            </Fragment>
+            </div>
           ) : (
             <Fragment>
               <h3>Your Message Has been Sent!</h3>
@@ -150,7 +164,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default ContactUs;

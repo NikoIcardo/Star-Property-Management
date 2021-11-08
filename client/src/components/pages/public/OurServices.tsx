@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import { pageHeader, rows } from '../../data/ourServicesData';
 import OurServiceRow from '../../layout/OurServiceRow';
 
-const OurServices = () => {
-  return (
+class OurServices extends Component {
+  render = () => (
     <Fragment>
       <div className="container-fluid mx-0 p-0">
         <div className="row">
@@ -13,7 +13,7 @@ const OurServices = () => {
               src={pageHeader.img}
               alt={pageHeader.text}
             />
-            <h3 class="d-none d-md-block img-caption">"{pageHeader.text}"</h3>
+            <h3 className="d-none d-md-block img-caption">"{pageHeader.text}"</h3>
           </div>
         </div>
         <div className="row">
@@ -30,6 +30,6 @@ const OurServices = () => {
       </div>
     </Fragment>
   );
-};
+}
 
 export default OurServices;
